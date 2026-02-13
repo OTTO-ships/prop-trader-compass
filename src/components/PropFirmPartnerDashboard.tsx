@@ -76,22 +76,15 @@ export default function PropFirmPartnerDashboard() {
         </div>
       </div>
 
-      {/* Other Partners */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {[
-          { label: "Get 80% Off Apex", href: "#" },
-          { label: "Topstep Review", href: "#" },
-          { label: "FTMO Discount Codes", href: "#" },
-        ].map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
+      {/* Partners */}
+      <a
+        href="https://truenorthtradr.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
+      >
+        View Verified Payout Proofs &amp; Rankings
+      </a>
     </section>
   );
 }
