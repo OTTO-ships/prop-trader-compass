@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# 📊 Professional Futures & CFD Prop Firm Calculator (2026)
 
-## Project info
+[![License: MIT](https://img.shields.io/badge/License-MIT-0400cd.svg)](https://opensource.org/licenses/MIT)
+[![Build: Lovable.dev](https://img.shields.io/badge/Built%20with-Lovable.dev-white)](https://lovable.dev)
+[![Market: Futures & CFDs](https://img.shields.io/badge/Market-Futures%20%26%20CFDs-0400cd)](https://truenorthtradr.com)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A high-performance trading utility designed for funded traders. This tool calculates precise drawdown limits, position sizing for E-minis and CFDs, and net payout splits. Built with a focus on institutional-grade risk management.
 
-## How can I edit this code?
+## 🚀 Live Demo
+**[Launch the Calculator App Here](https://yourusername.github.io/your-repo-name/)**
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠 Features
+* **Futures & CFD Precision:** Specific calculation logic for CME/CBOT tick values and CFD leverage.
+* **Drawdown Monitoring:** Real-time tracking of daily and maximum trailing drawdown.
+* **One-Time Fee Comparison:** A built-in logic module that compares the long-term cost of "Monthly Subscription" firms vs. "One-Time Fee" firms.
+* **Net Payout Estimator:** Calculate your take-home profit after firm splits (80/20, 90/10).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 💎 Featured Partner: The Trading Pit (TTP)
+**Stop the "Monthly Fee" Bleed.** Most Futures prop firms trap traders in a cycle of monthly data and activation fees. The Trading Pit offers a **One-Time Fee** model for both Futures and CFDs.
 
-**Use your preferred IDE**
+* **Asset Classes:** Trade E-minis, Crude Oil, Gold, and 400+ CFD instruments.
+* **No Subscriptions:** Pay once, get funded, and keep your profits.
+* **Global Scale:** Up to $5M scaling plan with deep institutional liquidity.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🔥 **Exclusive Deal:** Use code **20TNT** for an extra **20% OFF** your challenge.
+👉 [**Claim Your One-Time Fee Futures Account Here**](https://affiliate.thetradingpit.com/visit/?bta=35884&nci=5659)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🔗 Verified Trading Resources
+Our community maintains a live database of the best-performing prop firms in the current 2026 market:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+| Resource Type | Description | Link |
+| :--- | :--- | :--- |
+| **2026 Rankings** | Top 50 Prop Firms ranked by Payout Reliability | [**View Rankings**](https://truenorthtradr.com/prop-experience) |
+| **Futures Guide** | Comparison of One-Time Fee vs. Monthly Fee Firms | [**Read Comparison**](https://truenorthtadr.com/detailed-stats) |
+| **Discount Hub** | 80% - 90% Off Active Coupons (Updated Daily) | [**Get Coupons**](https://truenorthtradr.com/discounts) |
+| **Payout Proofs** | Real-time dashboard of trader withdrawals | [**View Proofs**](https://truenorthtradr.com/more-achievements) |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📦 Tech Stack
+This project is built with **React**, **TypeScript**, and **Tailwind CSS** using [Lovable.dev](https://lovable.dev). It is optimized for both desktop trading stations and mobile devices.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🤝 Contributing
+We welcome updates to firm-specific drawdown rules. Please open a Pull Request if you'd like to add a new preset for a specific Futures or CFD firm.
 
-**Edit a file directly in GitHub**
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+*Disclaimer: Trading involves significant risk of loss. This calculator is an educational tool and does not guarantee profitability. Always verify current rules with your chosen funding provider.*
