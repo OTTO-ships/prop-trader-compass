@@ -60,7 +60,7 @@ export default function Calculator() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation CTA */}
-      <div className="w-full bg-background px-4 py-3 text-center border-b border-border/30">
+      <div className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm px-4 py-3 text-center border-b border-border/30">
         <a
           href="https://truenorthtradr.com/detailed-stats"
           target="_blank"
