@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { DollarSign, TrendingDown, AlertTriangle } from "lucide-react";
+import { DollarSign, TrendingDown, AlertTriangle, Info } from "lucide-react";
 import PositionSizeCalculator from "./PositionSizeCalculator";
 import PropFirmPartnerDashboard from "./PropFirmPartnerDashboard";
 import AnimatedNumber from "./AnimatedNumber";
@@ -213,6 +213,25 @@ export default function Calculator() {
             </div>
           </div>
         </section>
+
+        {/* Pro-Tip Box */}
+        <div className="rounded-lg border border-primary bg-background p-4 space-y-2">
+          <div className="flex items-center gap-2">
+            <Info className="h-4 w-4 text-primary shrink-0" />
+            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-primary">Pro-Tip</span>
+          </div>
+          <p className="text-sm text-foreground leading-relaxed">
+            Stop paying monthly data fees. Most Futures firms charge $100+/month just to keep your account active. The Trading Pit offers a one-time fee only model.
+          </p>
+          <a
+            href="https://affiliate.thetradingpit.com/visit/?bta=35884&nci=5659"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-sm font-semibold text-primary hover:underline transition-all"
+          >
+            Switch to One-Time Funding &amp; Save 20% with code 20TNT →
+          </a>
+        </div>
 
         {/* Position Size Calculator */}
         <PositionSizeCalculator />
