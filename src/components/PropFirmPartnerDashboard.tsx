@@ -77,14 +77,25 @@ export default function PropFirmPartnerDashboard() {
       </div>
 
       {/* Partners */}
-      <a
-        href="https://truenorthtradr.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
-      >
-        View Verified Payout Proofs &amp; Rankings
-      </a>
+      {/* Partners */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a
+          href="https://truenorthtradr.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
+        >
+          View Verified Payout Proofs &amp; Rankings
+        </a>
+        <a
+          href="https://truenorthtradr.com/prop-experience"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
+        >
+          Compare 50+ Firms by Payout Speed &amp; Slippage
+        </a>
+      </div>
     </section>
   );
 }
