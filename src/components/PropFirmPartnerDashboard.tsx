@@ -51,7 +51,7 @@ export default function PropFirmPartnerDashboard() {
             href="https://affiliate.thetradingpit.com/visit/?bta=35884&nci=5659"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3.5 font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
+            className="flex-1 flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3.5 font-mono text-sm font-semibold text-primary-foreground transition-all cta-glow cta-shimmer"
           >
             Claim 20% Discount &amp; Start Challenge
             <ExternalLink className="h-3.5 w-3.5" />
@@ -59,7 +59,7 @@ export default function PropFirmPartnerDashboard() {
 
           <button
             onClick={handleCopy}
-            className="flex items-center justify-center gap-2 rounded-md border border-primary bg-background px-5 py-3.5 font-mono text-sm font-bold text-foreground transition-all hover:bg-primary/10 active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 rounded-md border border-primary bg-background px-5 py-3.5 font-mono text-sm font-bold text-foreground transition-all cta-ghost-glow"
           >
             {copied ? (
               <>
@@ -83,7 +83,7 @@ export default function PropFirmPartnerDashboard() {
           href="https://truenorthtradr.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
+          className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all cta-glow cta-shimmer"
         >
           View Verified Payout Proofs &amp; Rankings
         </a>
@@ -91,7 +91,7 @@ export default function PropFirmPartnerDashboard() {
           href="https://truenorthtradr.com/prop-experience"
           target="_blank"
           rel="noopener noreferrer"
-          className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
+          className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all cta-glow cta-shimmer"
         >
           Compare 50+ Firms by Payout Speed &amp; Slippage
         </a>

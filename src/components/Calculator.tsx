@@ -65,7 +65,7 @@ export default function Calculator() {
           href="https://truenorthtradr.com/detailed-stats"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-md border-2 border-primary bg-transparent px-5 py-2.5 font-mono text-sm font-semibold text-foreground transition-all hover:bg-primary hover:text-primary-foreground active:scale-[0.98]"
+          className="inline-block rounded-md border-2 border-primary bg-transparent px-5 py-2.5 font-mono text-sm font-semibold text-foreground transition-all hover:bg-primary hover:text-primary-foreground cta-ghost-glow cta-shimmer"
         >
           📊 View 2026 Prop Firm Rankings &amp; Verified Payouts
         </a>
