@@ -1,5 +1,7 @@
 import { useState, useMemo } from "react";
 import { DollarSign, TrendingDown, AlertTriangle } from "lucide-react";
+import PositionSizeCalculator from "./PositionSizeCalculator";
+import PropFirmPartnerDashboard from "./PropFirmPartnerDashboard";
 
 interface InputFieldProps {
   label: string;
@@ -207,27 +209,11 @@ export default function Calculator() {
           </div>
         </section>
 
-        {/* Funding Deals Section */}
-        <section className="rounded-lg border border-border/40 bg-card p-5 space-y-4">
-          <h2 className="text-xs font-mono font-semibold uppercase tracking-widest text-primary">
-            Institutional Funding Deals & Reviews
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { label: "Get 80% Off Apex", href: "#" },
-              { label: "Topstep Review", href: "#" },
-              { label: "FTMO Discount Codes", href: "#" },
-            ].map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="block rounded-md bg-primary px-4 py-3.5 text-center font-mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 active:scale-[0.98]"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </section>
+        {/* Position Size Calculator */}
+        <PositionSizeCalculator />
+
+        {/* Prop Firm Partner Dashboard */}
+        <PropFirmPartnerDashboard />
 
         <footer className="pb-8 pt-2 text-center">
           <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
