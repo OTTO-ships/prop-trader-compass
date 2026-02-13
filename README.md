@@ -7,7 +7,7 @@
 A high-performance trading utility designed for funded traders. This tool calculates precise drawdown limits, position sizing for E-minis and CFDs, and net payout splits. Built with a focus on institutional-grade risk management.
 
 ## 🚀 Live Demo
-**[Launch the Calculator App Here](https://yourusername.github.io/your-repo-name/)**
+**[Launch the Calculator App Here](https://otto-ships.github.io/prop-trader-compass/)**
 
 ---
 
