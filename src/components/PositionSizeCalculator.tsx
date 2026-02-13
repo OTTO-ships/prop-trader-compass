@@ -47,6 +47,7 @@ export default function PositionSizeCalculator() {
   const [stopLossUnits, setStopLossUnits] = useState(20);
   const [activeCategory, setActiveCategory] = useState<AssetCategory>("futures");
   const [selectedAssetIdx, setSelectedAssetIdx] = useState(0);
+  const [rrRatio, setRrRatio] = useState(2);
 
   const filteredAssets = useMemo(
     () => ASSET_PRESETS.filter((a) => a.category === activeCategory),
@@ -55,12 +56,13 @@ export default function PositionSizeCalculator() {
 
   const asset = filteredAssets[selectedAssetIdx] || filteredAssets[0];
 
-  const { riskDollars, contracts } = useMemo(() => {
+  const { riskDollars, contracts, potentialProfit } = useMemo(() => {
     const riskDollars = accountSize * (riskPct / 100);
     const riskPerContract = stopLossUnits * asset.tickValue;
     const contracts = riskPerContract > 0 ? riskDollars / riskPerContract : 0;
-    return { riskDollars, contracts };
-  }, [accountSize, riskPct, stopLossUnits, asset]);
+    const potentialProfit = riskDollars * rrRatio;
+    return { riskDollars, contracts, potentialProfit };
+  }, [accountSize, riskPct, stopLossUnits, asset, rrRatio]);
 
   const fmt = (n: number) =>
     n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
@@ -112,6 +114,7 @@ export default function PositionSizeCalculator() {
           { label: "Account Size", value: accountSize, onChange: setAccountSize, prefix: "$" },
           { label: "Risk Per Trade", value: riskPct, onChange: setRiskPct, suffix: "%" },
           { label: `Stop Loss (${asset.unit})`, value: stopLossUnits, onChange: setStopLossUnits },
+          { label: "Risk / Reward Ratio", value: rrRatio, onChange: setRrRatio, prefix: "R" },
           { label: `Tick Value ($)`, value: asset.tickValue, onChange: () => {}, prefix: "$", disabled: true },
         ].map((field) => (
           <div key={field.label} className="space-y-2">
@@ -147,6 +150,10 @@ export default function PositionSizeCalculator() {
         <div className="flex items-center justify-between py-2">
           <span className="text-sm text-muted-foreground">Risk Amount</span>
           <AnimatedNumber value={riskDollars} formatter={fmt} className="font-mono font-semibold text-destructive" />
+        </div>
+        <div className="flex items-center justify-between py-2">
+          <span className="text-sm text-muted-foreground">Potential Profit ({rrRatio}R)</span>
+          <AnimatedNumber value={potentialProfit} formatter={fmt} className="font-mono font-semibold text-success" />
         </div>
         <div className="flex items-center justify-between py-2">
           <span className="text-sm font-semibold">Recommended Size</span>
