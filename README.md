@@ -37,9 +37,9 @@ Our community maintains a live database of the best-performing prop firms in the
 | Resource Type | Description | Link |
 | :--- | :--- | :--- |
 | **2026 Rankings** | Top 50 Prop Firms ranked by Payout Reliability | [**View Rankings**](https://truenorthtradr.com/prop-experience) |
-| **Futures Guide** | Comparison of One-Time Fee vs. Monthly Fee Firms | [**Read Comparison**](https://truenorthtadr.com/detailed-stats) |
-| **Discount Hub** | 80% - 90% Off Active Coupons (Updated Daily) | [**Get Coupons**](https://truenorthtradr.com/discounts) |
-| **Payout Proofs** | Real-time dashboard of trader withdrawals | [**View Proofs**](https://truenorthtradr.com/more-achievements) |
+| **Futures Guide** | Comparison of One-Time Fee vs. Monthly Fee Firms | [**Read Comparison**](https://truenorthtadr.com) |
+| **Discount Hub** | 10% - 30% Off Active Coupons (Updated Daily) | [**Get Coupons**](https://truenorthtradr.com/discounts) |
+| **Payout Proofs** | Real-time dashboard of trader withdrawals | [**View Proofs**](https://truenorthtradr.com/detailed-stats) |
 
 ---
 
