@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { DollarSign, TrendingDown, AlertTriangle } from "lucide-react";
 import PositionSizeCalculator from "./PositionSizeCalculator";
 import PropFirmPartnerDashboard from "./PropFirmPartnerDashboard";
+import AnimatedNumber from "./AnimatedNumber";
 
 interface InputFieldProps {
   label: string;
@@ -114,9 +115,7 @@ export default function Calculator() {
                 Daily Loss Limit
               </h3>
             </div>
-            <p className="font-mono text-3xl font-bold text-destructive">
-              {fmt(calculations.dailyLossLimit)}
-            </p>
+            <AnimatedNumber value={calculations.dailyLossLimit} formatter={fmt} className="font-mono text-3xl font-bold text-destructive" />
             <p className="text-xs text-muted-foreground">
               Max loss allowed per day before violation
             </p>
@@ -129,9 +128,7 @@ export default function Calculator() {
                 Max Drawdown
               </h3>
             </div>
-            <p className="font-mono text-3xl font-bold text-warning">
-              {fmt(calculations.maxLossLimit)}
-            </p>
+            <AnimatedNumber value={calculations.maxLossLimit} formatter={fmt} className="font-mono text-3xl font-bold text-warning" />
             <p className="text-xs text-muted-foreground">
               Total loss before account breach
             </p>
@@ -187,24 +184,20 @@ export default function Calculator() {
           <div className="space-y-3">
             <div className="flex items-center justify-between py-2 border-b border-border/20">
               <span className="text-sm text-muted-foreground">Gross Profit</span>
-              <span className="font-mono font-semibold">{fmt(calculations.targetProfit)}</span>
+              <AnimatedNumber value={calculations.targetProfit} formatter={fmt} className="font-mono font-semibold" />
             </div>
             <div className="flex items-center justify-between py-2 border-b border-border/20">
               <span className="text-sm text-muted-foreground">
                 Firm Commission ({100 - profitSplit}%)
               </span>
-              <span className="font-mono font-semibold text-destructive">
-                -{fmt(calculations.firmCut)}
-              </span>
+              <AnimatedNumber value={-calculations.firmCut} formatter={(n) => fmt(Math.abs(n)).replace('$', '-$')} className="font-mono font-semibold text-destructive" />
             </div>
             <div className="flex items-center justify-between py-3">
               <span className="text-sm font-semibold flex items-center gap-2">
                 <DollarSign className="h-4 w-4 text-success" />
                 Your Take-Home
               </span>
-              <span className="font-mono text-2xl font-bold text-success">
-                {fmt(calculations.traderPayout)}
-              </span>
+              <AnimatedNumber value={calculations.traderPayout} formatter={fmt} className="font-mono text-2xl font-bold text-success" />
             </div>
           </div>
         </section>
