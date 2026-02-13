@@ -17,7 +17,7 @@ export default function PropFirmPartnerDashboard() {
       </h2>
 
       {/* Featured TTP Card */}
-      <div className="relative rounded-lg border border-primary bg-card p-5 space-y-4">
+      <div className="relative rounded-lg border border-primary bg-card p-5 space-y-4 card-pulse-border">
         {/* Badge */}
         <span className="absolute -top-3 right-4 rounded-full border border-primary bg-background px-3 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-widest text-primary">
           Top Rated: Futures &amp; CFDs

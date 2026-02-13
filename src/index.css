@@ -105,7 +105,21 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.06), transparent);
     animation: shimmer 3s ease-in-out infinite;
+
+  .card-pulse-border {
+    animation: border-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+  @keyframes border-pulse {
+    0%, 100% {
+      box-shadow: 0 0 8px hsl(241 100% 40% / 0.2), 0 0 16px hsl(241 100% 40% / 0.08);
+      border-color: hsl(241 100% 40% / 0.6);
+    }
+    50% {
+      box-shadow: 0 0 16px hsl(241 100% 40% / 0.4), 0 0 32px hsl(241 100% 40% / 0.15);
+      border-color: hsl(241 100% 40% / 1);
+    }
+  }
+}
   @keyframes shimmer {
     0% { left: -100%; }
     100% { left: 200%; }
