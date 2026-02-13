@@ -59,6 +59,18 @@ export default function Calculator() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Navigation CTA */}
+      <div className="w-full bg-background px-4 py-3 text-center border-b border-border/30">
+        <a
+          href="https://truenorthtradr.com/detailed-stats"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-md border-2 border-primary bg-transparent px-5 py-2.5 font-mono text-sm font-semibold text-foreground transition-all hover:bg-primary hover:text-primary-foreground active:scale-[0.98]"
+        >
+          📊 View 2026 Prop Firm Rankings &amp; Verified Payouts
+        </a>
+      </div>
+
       {/* Header */}
       <header className="border-b border-border/30 px-4 py-5">
         <div className="container mx-auto flex items-center justify-between">
