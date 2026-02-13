@@ -3,6 +3,7 @@ import { DollarSign, TrendingDown, AlertTriangle, Info } from "lucide-react";
 import PositionSizeCalculator from "./PositionSizeCalculator";
 import PropFirmPartnerDashboard from "./PropFirmPartnerDashboard";
 import AnimatedNumber from "./AnimatedNumber";
+import ScrollFade from "./ScrollFade";
 
 interface InputFieldProps {
   label: string;
@@ -86,6 +87,7 @@ export default function Calculator() {
 
       <main className="container mx-auto px-4 py-6 space-y-6 max-w-3xl">
         {/* Input Section */}
+        <ScrollFade>
         <section className="rounded-lg border border-border/40 bg-card p-5 space-y-5">
           <h2 className="text-xs font-mono font-semibold uppercase tracking-widest text-primary">
             Account Parameters
@@ -117,127 +119,47 @@ export default function Calculator() {
             />
           </div>
         </section>
+        </ScrollFade>
 
         {/* Risk Card */}
+        <ScrollFade delay={80}>
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-destructive/40 bg-card p-5 space-y-3">
-            <div className="flex items-center gap-2 text-destructive">
-              <AlertTriangle className="h-4 w-4" />
-              <h3 className="text-xs font-mono font-semibold uppercase tracking-widest">
-                Daily Loss Limit
-              </h3>
-            </div>
-            <AnimatedNumber value={calculations.dailyLossLimit} formatter={fmt} className="font-mono text-3xl font-bold text-destructive" />
-            <p className="text-xs text-muted-foreground">
-              Max loss allowed per day before violation
-            </p>
-          </div>
-
-          <div className="rounded-lg border border-warning/40 bg-card p-5 space-y-3">
-            <div className="flex items-center gap-2 text-warning">
-              <TrendingDown className="h-4 w-4" />
-              <h3 className="text-xs font-mono font-semibold uppercase tracking-widest">
-                Max Drawdown
-              </h3>
-            </div>
-            <AnimatedNumber value={calculations.maxLossLimit} formatter={fmt} className="font-mono text-3xl font-bold text-warning" />
-            <p className="text-xs text-muted-foreground">
-              Total loss before account breach
-            </p>
+...
           </div>
         </section>
+        </ScrollFade>
 
         {/* Health Meter */}
+        <ScrollFade delay={100}>
         <section className="rounded-lg border border-border/40 bg-card p-5 space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xs font-mono font-semibold uppercase tracking-widest text-primary">
-              Risk / Reward Health
-            </h3>
-            <span className="font-mono text-sm text-muted-foreground">
-              {calculations.healthPct.toFixed(0)}%
-            </span>
-          </div>
-          <div className="h-3 w-full rounded-full bg-muted overflow-hidden">
-            <div
-              className="h-full rounded-full bg-primary transition-all duration-500 ease-out"
-              style={{ width: `${Math.min(100, calculations.healthPct)}%` }}
-            />
-          </div>
-          <div className="flex justify-between text-[10px] font-mono text-muted-foreground uppercase">
-            <span>Drawdown Zone</span>
-            <span>Profit Target</span>
-          </div>
+...
         </section>
+        </ScrollFade>
 
         {/* Payout Estimator */}
+        <ScrollFade delay={120}>
         <section className="rounded-lg border border-border/40 bg-card p-5 space-y-5">
-          <h2 className="text-xs font-mono font-semibold uppercase tracking-widest text-primary">
-            Payout Estimator
-          </h2>
-
-          {/* Profit Split Toggle */}
-          <div className="flex gap-2">
-            {([80, 90] as const).map((split) => (
-              <button
-                key={split}
-                onClick={() => setProfitSplit(split)}
-                className={`flex-1 rounded-md border py-3 font-mono text-sm font-semibold transition-all ${
-                  profitSplit === split
-                    ? "border-primary bg-primary text-primary-foreground"
-                    : "border-border/40 bg-secondary text-muted-foreground hover:border-primary/60"
-                }`}
-              >
-                {split}/{100 - split} Split
-              </button>
-            ))}
-          </div>
-
-          {/* Payout Breakdown */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between py-2 border-b border-border/20">
-              <span className="text-sm text-muted-foreground">Gross Profit</span>
-              <AnimatedNumber value={calculations.targetProfit} formatter={fmt} className="font-mono font-semibold" />
-            </div>
-            <div className="flex items-center justify-between py-2 border-b border-border/20">
-              <span className="text-sm text-muted-foreground">
-                Firm Commission ({100 - profitSplit}%)
-              </span>
-              <AnimatedNumber value={-calculations.firmCut} formatter={(n) => fmt(Math.abs(n)).replace('$', '-$')} className="font-mono font-semibold text-destructive" />
-            </div>
-            <div className="flex items-center justify-between py-3">
-              <span className="text-sm font-semibold flex items-center gap-2">
-                <DollarSign className="h-4 w-4 text-success" />
-                Your Take-Home
-              </span>
-              <AnimatedNumber value={calculations.traderPayout} formatter={fmt} className="font-mono text-2xl font-bold text-success" />
-            </div>
-          </div>
+...
         </section>
+        </ScrollFade>
 
         {/* Pro-Tip Box */}
+        <ScrollFade delay={140}>
         <div className="rounded-lg border border-primary bg-background p-4 space-y-2">
-          <div className="flex items-center gap-2">
-            <Info className="h-4 w-4 text-primary shrink-0" />
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-primary">Pro-Tip</span>
-          </div>
-          <p className="text-sm text-foreground leading-relaxed">
-            Stop paying monthly data fees. Most Futures firms charge $100+/month just to keep your account active. The Trading Pit offers a one-time fee only model.
-          </p>
-          <a
-            href="https://affiliate.thetradingpit.com/visit/?bta=35884&nci=5659"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-sm font-semibold text-primary hover:underline transition-all"
-          >
-            Switch to One-Time Funding &amp; Save 20% with code 20TNT →
-          </a>
+...
         </div>
+        </ScrollFade>
 
         {/* Position Size Calculator */}
+        <ScrollFade delay={160}>
         <PositionSizeCalculator />
+        </ScrollFade>
 
         {/* Prop Firm Partner Dashboard */}
+        <ScrollFade delay={180}>
         <PropFirmPartnerDashboard />
+        </ScrollFade>
 
         <footer className="pb-8 pt-2 text-center">
           <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
